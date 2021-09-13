@@ -4,17 +4,19 @@ import { Component } from '@angular/core'
     selector: 'events-list',
     template: `
     <div>
-    <h1>Upcoming Angular Events / Utlwaevents</h1>
+        <h1>Upcoming Angular Events / Utlwaevents</h1>
         <hr>
-        <div class="well">
-        <div>Hello World</div>
+        <div class="row">
+            <div *ngFor="let event of events" class="col-md-5">
+                <event-thumbnail [event]="event"></event-thumbnail>
+            </div>
         </div>
-    <event-thumbnail [event]="event1"></event-thumbnail>
     </div>
     `
 })
 export class EventsListComponent {
-event1 = {
+events = [
+     {
     id: 1,
     name: 'Angular Connect & Utlwaevents',
     date: '09/10/2021',
@@ -27,5 +29,62 @@ event1 = {
         city: 'Germiston' ,
         country: 'South Africa'
         }
-    }
+    },
+      {
+        id: 2,
+        name: 'Angular Connect & Utlwaevents',
+        date: '09/10/2021',
+        time: '10:00 am',
+        price: 599.99,
+        imageUrl: '/assets/images/angularconnect-shield.png' ,
+        location: {
+            address: '14 engelwood circle' ,
+            suburb: 'klippoortjie park' ,
+            city: 'Germiston' ,
+            country: 'South Africa'
+            }
+        },
+         {
+            id: 3,
+            name: 'Angular Connect & Utlwaevents',
+            date: '09/10/2021',
+            time: '10:00 am',
+            price: 599.99,
+            imageUrl: '/assets/images/angularconnect-shield.png' ,
+            location: {
+                address: '14 engelwood circle' ,
+                suburb: 'klippoortjie park' ,
+                city: 'Germiston' ,
+                country: 'South Africa'
+                }
+            },
+             {
+                id: 4,
+                name: 'Angular Connect & Utlwaevents',
+                date: '09/10/2021',
+                time: '10:00 am',
+                price: 599.99,
+                imageUrl: '/assets/images/angularconnect-shield.png' ,
+                location: {
+                    address: '14 engelwood circle' ,
+                    suburb: 'klippoortjie park' ,
+                    city: 'Germiston' ,
+                    country: 'South Africa'
+                    }
+                },
+                {
+                    id: 5,
+                    name: 'Angular Connect & Utlwaevents',
+                    date: '09/10/2021',
+                    time: '10:00 am',
+                    price: 599.99,
+                    imageUrl: '/assets/images/angularconnect-shield.png' ,
+                    location: {
+                        address: '14 engelwood circle' ,
+                        suburb: 'klippoortjie park' ,
+                        city: 'Germiston' ,
+                        country: 'South Africa'
+                        }
+                    }
+]
 }
