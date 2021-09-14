@@ -37,12 +37,7 @@ events = [
         time: '10:00 am',
         price: 599.99,
         imageUrl: '/assets/images/angularconnect-shield.png' ,
-        location: {
-            address: '14 engelwood circle' ,
-            suburb: 'klippoortjie park' ,
-            city: 'Germiston' ,
-            country: 'South Africa'
-            }
+        onlineUrl: 'http://ng-nl.org',
         },
          {
             id: 3,
